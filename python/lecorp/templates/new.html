@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }} "/>
+    <title>Playlist Nova Musica</title>
+</head>
+<body>
+
+    <section id="new">
+        <a href="">
+                <img id="home" src="{{url_for('static', filename='img/mini-logo.png')}}" alt="">
+        </a>
+
+        <div id="card">
+            <h4>Nova Musica</h4>
+
+            <form action="/new" method="POST">
+                <div class="label-float">
+                    <input type="text" name="nome" id="nome" placeholder=" "required>
+                    <label for="nome">nome</label>
+                </div>
+                <div class="label-float">
+                    <input type="text" name="artista" id="artista" placeholder=" "required>
+                    <label for="artista">artista</label>
+                </div>
+                <div class="label-float">
+                    <input type="text" name="link" id="link" placeholder=" "required>
+                    <label for="link">link</label>
+                </div>
+                <div class="justify-center">
+                    <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+
+        <a href="">
+            <img id="gif" src="{{url_for('static', filename='img/logo-blue.gif')}}" alt="">
+        </a>
+        
+    </section>
+
+</body>
+</html>
